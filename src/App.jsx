@@ -9,21 +9,21 @@ export function App() {
 const name = "AAPAP"
 const age = 22
 const imgURL = "https://randomuser.me/api/portraits/women/50.jpg"
+const imgURL2 = "https://randomuser.me/api/portraits/women/33.jpg"
 
 return (
     <>
-      <h1>Hello ? react</h1>
-      <p>pagina web criada com react</p>
+      <div className="titleConteiner">
 
-       
-         
-          
-          <Perfil name="asd" age="22" />
-         <Img name={name} age={age} imgurl="https://randomuser.me/api/portraits/women/50.jpg" />
-       
+        <h1>Hello ? react</h1>
+        <p>pagina web criada com react</p>
+      </div>
 
-      <button>asd</button>
+      <div className="usersContainer">
 
+        <Img name={name} age={age} imgurl={imgURL} />
+        <Img name={"Persona"} age={29} imgurl={imgURL2} />
+      </div>
     </>
   )
 }

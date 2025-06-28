@@ -1,22 +1,39 @@
+import "./Img.css"
+
 export function Img({name, age, imgurl}){
     return (
         
         <div>
-            <h2> Bem vindo</h2>
+            {/* <h2> Bem vindo</h2> */}
 
 
             <div style={{ 
                 display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
+                flexDirection: "row",
+                // justifyContent: "center",
                 alignItems: "flex-start",
-                gap: ".1px",
+                gap: "10px",
+                margin: "0",
+                marginTop: "10px",
+                backgroundColor: "#958",
+                width: "300px", 
+                border: '1px solid black', borderRadius: '20px' 
+                
 
              }} >
-                <img src={imgurl}/>
+                <img style={{ 
+                    borderRadius: "20px",
+                    
+                 }}
+                
+                    src={imgurl}
+                />
+                <div className="profileAtrr">
+
+                <p className=" "><strong>Name:</strong>{name}</p>
+                <p className=" "><strong>Idade:</strong> {age}</p>
+                </div>
             </div>
-            <p>Name: {name}</p>
-            <p>Idade: {age}</p>
         </div>
         
     )
